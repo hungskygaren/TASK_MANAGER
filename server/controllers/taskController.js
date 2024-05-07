@@ -8,16 +8,16 @@ export const createTask = async (req, res) => {
 
     const { title, team, stage, date, priority, assets } = req.body;
 
-    let text = "New task has been assigned to you";
+    let text = "Một công việc mới đã được giao cho bạn";
     if (team?.length > 1) {
-      text = text + ` and ${team?.length - 1} others.`;
+      text = text + ` và ${team?.length - 1} người khác.`;
     }
 
     text =
       text +
-      ` The task priority is set a ${priority} priority, so check and act accordingly. The task date is ${new Date(
+      ` Mức độ ưu tiên của công việc được đặt là ${priority}, Vì vậy, hãy kiểm tra và hành động phù hợp. Ngày hết hạn của công việc là ${new Date(
         date
-      ).toDateString()}. Thank you!!!`;
+      ).toDateString()}. Cảm ơn!!!`;
 
     const activity = {
       type: "assigned",
@@ -70,16 +70,16 @@ export const duplicateTask = async (req, res) => {
     await newTask.save();
 
     //alert users of the task
-    let text = "New task has been assigned to you";
+    let text = "Một công việc mới đã được giao cho bạn";
     if (task.team.length > 1) {
-      text = text + ` and ${task.team.length - 1} others.`;
+      text = text + ` và ${task.team.length - 1} người khác.`;
     }
 
     text =
       text +
-      ` The task priority is set a ${
+      ` Mức độ ưu tiên của công việc được đặt là ${
         task.priority
-      } priority, so check and act accordingly. The task date is ${task.date.toDateString()}. Thank you!!!`;
+      }  Vì vậy, hãy kiểm tra và hành động phù hợp. Ngày hết hạn của công việc là ${task.date.toDateString()}. Cảm ơn!!!`;
 
     await Notice.create({
       team: task.team,
