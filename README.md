@@ -1,158 +1,70 @@
 # Fullstack Task Manager (MERN)
 
-
-
 # Overview
-The Cloud-Based Task Manager is a web application designed to streamline team task management. Built using the MERN stack (MongoDB, Express.js, React, and Node.js), this platform provides a user-friendly interface for efficient task assignment, tracking, and collaboration. The application caters to administrators and regular users, offering comprehensive features to enhance productivity and organization.
 
-
+Trình quản lý công việc dựa trên đám mây là một ứng dụng web được thiết kế để hợp lý hóa việc quản lý công việc của nhóm. Được xây dựng bằng ngăn xếp MERN (MongoDB, Express.js, React và Node.js), nền tảng này cung cấp giao diện thân thiện với người dùng để phân công, theo dõi và cộng tác nhiệm vụ hiệu quả. Ứng dụng này phục vụ cho quản trị viên và người dùng thường xuyên, cung cấp các tính năng toàn diện để nâng cao năng suất và tổ chức.
 
 ### Why/Problem?
-In a dynamic work environment, effective task management is crucial for team success. Traditional methods of task tracking through spreadsheets or manual systems can be cumbersome and prone to errors. The Cloud-Based Task Manager aims to address these challenges by providing a centralized platform for task management, enabling seamless collaboration and improved workflow efficiency.
 
-
+Trong môi trường làm việc năng động, việc quản lý công việc hiệu quả là rất quan trọng cho sự thành công của nhóm. Các phương pháp theo dõi công việc truyền thống thông qua bảng tính hoặc hệ thống thủ công có thể cồng kềnh và dễ mắc lỗi. Trình quản lý công việc dựa trên đám mây nhằm mục đích giải quyết những thách thức này bằng cách cung cấp nền tảng tập trung để quản lý công việc, cho phép cộng tác liền mạch và cải thiện hiệu quả quy trình làm việc.
 
 ### **Background**:
-With the rise of remote work and dispersed teams, there is a growing need for tools that facilitate effective communication and task coordination. The Cloud-Based Task Manager addresses this need by leveraging modern web technologies to create an intuitive and responsive task management solution. The MERN stack ensures scalability, while the integration of Redux Toolkit, Headless UI, and Tailwind CSS enhances user experience and performance.
 
+Với sự gia tăng của công việc từ xa và các nhóm phân tán, nhu cầu ngày càng tăng về các công cụ hỗ trợ giao tiếp và phối hợp nhiệm vụ hiệu quả. Trình quản lý công việc dựa trên đám mây giải quyết nhu cầu này bằng cách tận dụng các công nghệ web hiện đại để tạo ra giải pháp quản lý công việc trực quan và đáp ứng. Ngăn xếp MERN đảm bảo khả năng mở rộng, đồng thời việc tích hợp Bộ công cụ Redux, Giao diện người dùng không đầu và CSS Tailwind nâng cao trải nghiệm và hiệu suất của người dùng.
 
-### 
+###
+
 ## **Admin Features:**
+
 1. **User Management:**
-    - Create admin accounts.
-    - Add and manage team members.
+
+   - Tạo tài khoản quản trị.
+   - Thêm và quản lý thành viên nhóm.
 
 2. **Task Assignment:**
-    - Assign tasks to individual or multiple users.
-    - Update task details and status.
+
+   - Phân công nhiệm vụ cho cá nhân hoặc nhiều người dùng.
+   - Cập nhật chi tiết và trạng thái nhiệm vụ.
 
 3. **Task Properties:**
-    - Label tasks as todo, in progress, or completed.
-    - Assign priority levels (high, medium, normal, low).
-    - Add and manage sub-tasks.
+
+   - Dán nhãn các nhiệm vụ là việc cần làm, đang thực hiện hoặc đã hoàn thành.
+   - Chỉ định mức độ ưu tiên (cao, trung bình, bình thường, thấp).
+   - Thêm và quản lý các nhiệm vụ phụ.
 
 4. **Asset Management:**
-    - Upload task assets, such as images.
+
+   - Tải lên nội dung nhiệm vụ, hình ảnh.
 
 5. **User Account Control:**
-    - Disable or activate user accounts.
-    - Permanently delete or trash tasks.
-
+   - Vô hiệu hóa hoặc kích hoạt tài khoản người dùng.
+   - Xóa vĩnh viễn hoặc dọn rác các nhiệm vụ.
 
 ## **User Features:**
+
 1. **Task Interaction:**
-    - Change task status (in progress or completed).
-    - View detailed task information.
+
+   - Thay đổi trạng thái nhiệm vụ (đang tiến hành hoặc đã hoàn thành).
+   - Xem thông tin nhiệm vụ chi tiết.
 
 2. **Communication:**
-    - Add comments or chat to task activities.
-
+   - Thêm nhận xét hoặc trò chuyện vào hoạt động nhiệm vụ.
 
 ## **General Features:**
+
 1. **Authentication and Authorization:**
-    - User login with secure authentication.
-    - Role-based access control.
+
+   - Người dùng đăng nhập với xác thực an toàn.
+   - Kiểm soát truy cập dựa trên vai trò
 
 2. **Profile Management:**
-    - Update user profiles.
+
+   - Cập nhật thông tin
 
 3. **Password Management:**
-    - Change passwords securely.
+
+   - Thay đổi mật khẩu
 
 4. **Dashboard:**
-    - Provide a summary of user activities.
-    - Filter tasks into todo, in progress, or completed.
-
-
-
-
-## **Technologies Used:**
-- **Frontend:**
-    - React (Vite)
-    - Redux Toolkit for State Management
-    - Headless UI
-    - Tailwind CSS
-
-
-- **Backend:**
-    - Node.js with Express.js
-    
-- **Database:**
-    - MongoDB for efficient and scalable data storage.
-
-
-The Cloud-Based Task Manager is an innovative solution that brings efficiency and organization to task management within teams. By harnessing the power of the MERN stack and modern frontend technologies, the platform provides a seamless experience for both administrators and users, fostering collaboration and productivity.
-
-&nbsp;
-
-## SETUP INSTRUCTIONS
-
-
-# Server Setup
-
-## Environment variables
-First, create the environment variables file `.env` in the server folder. The `.env` file contains the following environment variables:
-
-- MONGODB_URI = `your MongoDB URL`
-- JWT_SECRET = `any secret key - must be secured`
-- PORT = `8800` or any port number
-- NODE_ENV = `development`
-
-
-&nbsp;
-
-## Set Up MongoDB:
-
-1. Setting up MongoDB involves a few steps:
-    - Visit MongoDB Atlas Website
-        - Go to the MongoDB Atlas website: [https://www.mongodb.com/cloud/atlas](https://www.mongodb.com/cloud/atlas).
-
-    - Create an Account
-    - Log in to your MongoDB Atlas account.
-    - Create a New Cluster
-    - Choose a Cloud Provider and Region
-    - Configure Cluster Settings
-    - Create Cluster
-    - Wait for Cluster to Deploy
-    - Create Database User
-    - Set Up IP Whitelist
-    - Connect to Cluster
-    - Configure Your Application
-    - Test the Connection
-
-2. Create a new database and configure the `.env` file with the MongoDB connection URL. 
-
-## Steps to run server
-
-1. Open the project in any editor of choice.
-2. Navigate into the server directory `cd server`.
-3. Run `npm i` or `npm install` to install the packages.
-4. Run `npm start` to start the server.
-
-If configured correctly, you should see a message indicating that the server is running successfully and `Database Connected`.
-
-&nbsp;
-
-# Client Side Setup
-
-## Environment variables
-First, create the environment variables file `.env` in the client folder. The `.env` file contains the following environment variables:
-
-- VITE_APP_BASE_URL = `http://localhost:8800` #Note: Change the port 8800 to your port number.
-- VITE_APP_FIREBASE_API_KEY = `Firebase api key`
-
-## Steps to run client
-
-1. Navigate into the client directory `cd client`.
-2. Run `npm i` or `npm install` to install the packages.
-3. Run `npm start` to run the app on `http://localhost:3000`.
-4. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-
-
-&nbsp;
-
-## For Support, Contact:
-
-- Email: codewavewithasante@gmail.com
-- Telegram Chat: [https://t.me/Codewave_with_asante](https://t.me/Codewave_with_asante)
+   - Cung cấp một bản tóm tắt các hoạt động của người dùng.
+   - Lọc các nhiệm vụ thành việc cần làm, đang thực hiện hoặc đã hoàn thành.
