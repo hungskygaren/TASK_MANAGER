@@ -16,7 +16,7 @@ import { BGS, PRIOTITYSTYELS, TASK_TYPE, getInitials } from "../utils";
 import UserInfo from "../components/UserInfo";
 import { useGetDashboardStatsQuery } from "../redux/slices/api/taskApiSlice";
 import Loading from "../components/Loader";
-
+import ChatBot from "../components/ChatBot";
 const TaskTable = ({ tasks }) => {
   const ICONS = {
     high: <MdKeyboardDoubleArrowUp />,
@@ -168,21 +168,21 @@ const Dashboard = () => {
     {
       _id: "2",
       label: "Đã Hoàn Thành",
-      total: totals["completed"] || 0,
+      total: totals && totals.completed ? totals.completed : 0,
       icon: <MdAdminPanelSettings />,
       bg: "bg-[#0f766e]",
     },
     {
       _id: "3",
       label: "Đang Tiến Hành ",
-      total: totals["in progress"] || 0,
+      total: totals && totals["in progress"] ? totals["in progress"] : 0,
       icon: <LuClipboardEdit />,
       bg: "bg-[#f59e0b]",
     },
     {
       _id: "4",
       label: "Việc Cần Làm",
-      total: totals["todo"],
+      total: totals && totals["todo"] ? totals["todo"] : 0,
       icon: <FaArrowsToDot />,
       bg: "bg-[#be185d]" || 0,
     },
@@ -230,8 +230,10 @@ const Dashboard = () => {
 
         {/* /right */}
 
-        <UserTable users={data.users} />
+        {/* <UserTable users={data.users} /> */}
+        <UserTable users={data && data.users ? data.users : []} />
       </div>
+      <ChatBot />
     </div>
   );
 };
